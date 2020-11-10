@@ -58,36 +58,36 @@ public class AlgoritmosRecursivos extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
-        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
+        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image.png"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, -1, -1));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, -1, 40));
 
         algoritmo1.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo1.setText("Algoritmo 1");
-        getContentPane().add(algoritmo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 180, 80));
+        getContentPane().add(algoritmo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 220, 80));
 
         algoritmoTitulo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmoTitulo1.setForeground(new java.awt.Color(255, 255, 255));
         algoritmoTitulo1.setText("Algoritmo 1");
-        getContentPane().add(algoritmoTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, -1, -1));
+        getContentPane().add(algoritmoTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
 
         algoritmo2.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo2.setText("Algoritmo 2");
-        getContentPane().add(algoritmo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 180, 80));
+        getContentPane().add(algoritmo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 220, 80));
 
         algoritmoTitulo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmoTitulo2.setForeground(new java.awt.Color(255, 255, 255));
         algoritmoTitulo2.setText("Algoritmo 2");
-        getContentPane().add(algoritmoTitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, -1));
+        getContentPane().add(algoritmoTitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
         algoritmoTitulo3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmoTitulo3.setForeground(new java.awt.Color(255, 255, 255));
         algoritmoTitulo3.setText("Algoritmo 3");
-        getContentPane().add(algoritmoTitulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, -1, -1));
+        getContentPane().add(algoritmoTitulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
 
         algoritmo3.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -97,25 +97,25 @@ public class AlgoritmosRecursivos extends javax.swing.JFrame {
                 algoritmo3ActionPerformed(evt);
             }
         });
-        getContentPane().add(algoritmo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 180, 80));
+        getContentPane().add(algoritmo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 230, 80));
 
         algoritmo4.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo4.setText("Algoritmo 4");
-        getContentPane().add(algoritmo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 180, 80));
+        getContentPane().add(algoritmo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 220, 80));
 
         algoritmoTitulo4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmoTitulo4.setForeground(new java.awt.Color(255, 255, 255));
         algoritmoTitulo4.setText("Algoritmo 4");
-        getContentPane().add(algoritmoTitulo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
+        getContentPane().add(algoritmoTitulo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
         tittle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle.setForeground(new java.awt.Color(255, 255, 255));
         tittle.setText("Algoritmos recursivos");
-        getContentPane().add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, -1));
+        getContentPane().add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 569, 480));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

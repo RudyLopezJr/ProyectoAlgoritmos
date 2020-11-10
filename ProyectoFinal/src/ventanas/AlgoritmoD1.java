@@ -3,10 +3,10 @@ package ventanas;
 import java.awt.Image;
 import java.awt.Toolkit;
 
-public class plantilla extends javax.swing.JFrame {
+public class AlgoritmoD1 extends javax.swing.JFrame {
 
    
-    public plantilla() {
+    public AlgoritmoD1() {
         initComponents();
         this.setLocationRelativeTo(null);
         salir.setFocusable(false);
@@ -29,6 +29,7 @@ public class plantilla extends javax.swing.JFrame {
 
         salir = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
+        tittle = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,20 +46,25 @@ public class plantilla extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
-        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
+        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image.png"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, -1));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, -1));
+
+        tittle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        tittle.setForeground(new java.awt.Color(255, 255, 255));
+        tittle.setText("Algoritmo Divide y Venceras 1");
+        getContentPane().add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 569, 406));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_salirActionPerformed
 
     /**
@@ -78,21 +84,35 @@ public class plantilla extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(plantilla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoD1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(plantilla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoD1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(plantilla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoD1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(plantilla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoD1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new plantilla().setVisible(true);
+                new AlgoritmoD1().setVisible(true);
             }
         });
     }
@@ -101,5 +121,6 @@ public class plantilla extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel logo;
     private javax.swing.JButton salir;
+    private javax.swing.JLabel tittle;
     // End of variables declaration//GEN-END:variables
 }
