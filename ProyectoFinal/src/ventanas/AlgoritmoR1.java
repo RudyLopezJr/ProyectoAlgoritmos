@@ -2,6 +2,16 @@ package ventanas;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import metodos.AlgoritmoR1A;
+import metodos.ObtenerArray;
+import metodos.Escribir;
 
 public class AlgoritmoR1 extends javax.swing.JFrame {
 
@@ -33,9 +43,11 @@ public class AlgoritmoR1 extends javax.swing.JFrame {
         tittle1 = new javax.swing.JLabel();
         soloNumeroMaximo = new javax.swing.JLabel();
         ingresarButton = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        numMax = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtArea = new javax.swing.JTextArea();
+        tiempoDeEjecucionText = new javax.swing.JLabel();
+        tiempoDeEjecucion = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,20 +86,34 @@ public class AlgoritmoR1 extends javax.swing.JFrame {
         getContentPane().add(soloNumeroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         ingresarButton.setText("Ingresar");
-        getContentPane().add(ingresarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, -1, -1));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        ingresarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ingresarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 260, -1));
+        getContentPane().add(ingresarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        numMax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numMaxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(numMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 260, -1));
+
+        txtArea.setColumns(20);
+        txtArea.setRows(5);
+        jScrollPane1.setViewportView(txtArea);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 560, 210));
+
+        tiempoDeEjecucionText.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        tiempoDeEjecucionText.setForeground(new java.awt.Color(255, 255, 255));
+        tiempoDeEjecucionText.setText("Tiempo de ejecucion:");
+        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+
+        tiempoDeEjecucion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        tiempoDeEjecucion.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(tiempoDeEjecucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 450));
@@ -99,9 +125,24 @@ public class AlgoritmoR1 extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_salirActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void numMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numMaxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_numMaxActionPerformed
+
+    private void ingresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarButtonActionPerformed
+        
+        Escribir texto = new Escribir(numMax.getText());
+        
+        long startTime = System.currentTimeMillis();
+       
+        AlgoritmoR1A algoritmo = new AlgoritmoR1A(texto.getArray());
+        
+        long endTime = System.currentTimeMillis() - startTime;
+        //endTime*=10000;
+        txtArea.setText(algoritmo.getCadena());
+        tiempoDeEjecucion.setText(Long.toString(endTime)+" milisegundos");
+        
+    }//GEN-LAST:event_ingresarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,12 +190,14 @@ public class AlgoritmoR1 extends javax.swing.JFrame {
     private javax.swing.JButton ingresarButton;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel logo;
+    private javax.swing.JTextField numMax;
     private javax.swing.JButton salir;
     private javax.swing.JLabel soloNumeroMaximo;
+    private javax.swing.JLabel tiempoDeEjecucion;
+    private javax.swing.JLabel tiempoDeEjecucionText;
     private javax.swing.JLabel tittle;
     private javax.swing.JLabel tittle1;
+    private javax.swing.JTextArea txtArea;
     // End of variables declaration//GEN-END:variables
 }

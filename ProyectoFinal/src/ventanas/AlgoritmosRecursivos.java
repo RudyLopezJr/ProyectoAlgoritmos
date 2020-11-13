@@ -67,6 +67,11 @@ public class AlgoritmosRecursivos extends javax.swing.JFrame {
         algoritmo1.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo1.setText("Algoritmo 1");
+        algoritmo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                algoritmo1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(algoritmo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 220, 80));
 
         algoritmoTitulo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -127,6 +132,11 @@ public class AlgoritmosRecursivos extends javax.swing.JFrame {
     private void algoritmo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_algoritmo3ActionPerformed
+
+    private void algoritmo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo1ActionPerformed
+        AlgoritmoR1 aR1 = new AlgoritmoR1();
+       aR1.setVisible(true);
+    }//GEN-LAST:event_algoritmo1ActionPerformed
 
     /**
      * @param args the command line arguments
