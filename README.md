@@ -6,4 +6,4 @@ Oscar:  sumar los digitos de un numero,  invertir un numero
 
 Eddie: Dijkstra y Prim
 
-Eduardo: multiplicación de numeros enteros grandes (DYV)
+Eduardo: counting sort
