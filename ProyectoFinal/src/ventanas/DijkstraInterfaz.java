@@ -43,11 +43,12 @@ public class DijkstraInterfaz extends javax.swing.JFrame {
         tittle1 = new javax.swing.JLabel();
         soloNumeroMaximo = new javax.swing.JLabel();
         ingresarButton = new javax.swing.JButton();
-        numMax = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
         tiempoDeEjecucionText = new javax.swing.JLabel();
         tiempoDeEjecucion = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        numMax = new javax.swing.JTextArea();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,17 +74,17 @@ public class DijkstraInterfaz extends javax.swing.JFrame {
         tittle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle.setForeground(new java.awt.Color(255, 255, 255));
         tittle.setText("Camino más corto");
-        getContentPane().add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, -1, -1));
+        getContentPane().add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, -1));
 
         tittle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle1.setForeground(new java.awt.Color(255, 255, 255));
         tittle1.setText("Algoritmo de Dijkstra");
-        getContentPane().add(tittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
+        getContentPane().add(tittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
 
         soloNumeroMaximo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         soloNumeroMaximo.setForeground(new java.awt.Color(255, 255, 255));
         soloNumeroMaximo.setText("Ingrese el grafo:");
-        getContentPane().add(soloNumeroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        getContentPane().add(soloNumeroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
         ingresarButton.setText("Ingresar");
         ingresarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -91,29 +92,28 @@ public class DijkstraInterfaz extends javax.swing.JFrame {
                 ingresarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ingresarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, -1, -1));
-
-        numMax.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numMaxActionPerformed(evt);
-            }
-        });
-        getContentPane().add(numMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 340, -1));
+        getContentPane().add(ingresarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
 
         txtArea.setColumns(20);
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 560, 210));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 270, 210));
 
         tiempoDeEjecucionText.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tiempoDeEjecucionText.setForeground(new java.awt.Color(255, 255, 255));
         tiempoDeEjecucionText.setText("Tiempo de ejecucion:");
-        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
 
         tiempoDeEjecucion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tiempoDeEjecucion.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(tiempoDeEjecucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
+
+        numMax.setColumns(20);
+        numMax.setRows(5);
+        jScrollPane2.setViewportView(numMax);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 270, 210));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 450));
@@ -124,10 +124,6 @@ public class DijkstraInterfaz extends javax.swing.JFrame {
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
        this.dispose();
     }//GEN-LAST:event_salirActionPerformed
-
-    private void numMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numMaxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numMaxActionPerformed
 
     private void ingresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarButtonActionPerformed
         
@@ -190,8 +186,9 @@ public class DijkstraInterfaz extends javax.swing.JFrame {
     private javax.swing.JButton ingresarButton;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel logo;
-    private javax.swing.JTextField numMax;
+    private javax.swing.JTextArea numMax;
     private javax.swing.JButton salir;
     private javax.swing.JLabel soloNumeroMaximo;
     private javax.swing.JLabel tiempoDeEjecucion;
