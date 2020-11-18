@@ -81,6 +81,11 @@ public class Interfaz extends javax.swing.JFrame {
         djikstraButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         djikstraButton.setForeground(new java.awt.Color(255, 255, 255));
         djikstraButton.setText("Djikstra");
+        djikstraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                djikstraButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(djikstraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 230, 100));
 
         tittle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -121,7 +126,8 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void primButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primButtonActionPerformed
-        // TODO add your handling code here:
+        PrimInterfaz primInterfaz = new PrimInterfaz();
+        primInterfaz.setVisible(true);
     }//GEN-LAST:event_primButtonActionPerformed
 
     private void recursivosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recursivosButtonActionPerformed
@@ -133,6 +139,11 @@ public class Interfaz extends javax.swing.JFrame {
        AlgoritmosDivideYVenceras nuevaInterfaz = new AlgoritmosDivideYVenceras();
        nuevaInterfaz.setVisible(true);
     }//GEN-LAST:event_divideButtonActionPerformed
+
+    private void djikstraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_djikstraButtonActionPerformed
+        DijkstraInterfaz dijkstra = new DijkstraInterfaz();
+        dijkstra.setVisible(true);
+    }//GEN-LAST:event_djikstraButtonActionPerformed
 
     /**
      * @param args the command line arguments
