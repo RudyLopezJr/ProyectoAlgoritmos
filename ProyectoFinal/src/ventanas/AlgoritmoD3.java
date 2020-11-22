@@ -62,7 +62,7 @@ public class AlgoritmoD3 extends javax.swing.JFrame {
 
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image.png"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, -1, -1));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, -1));
 
         tittle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,7 +77,7 @@ public class AlgoritmoD3 extends javax.swing.JFrame {
         soloNumeroMaximo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         soloNumeroMaximo.setForeground(new java.awt.Color(255, 255, 255));
         soloNumeroMaximo.setText("Ingrese la lista de numeros:");
-        getContentPane().add(soloNumeroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        getContentPane().add(soloNumeroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         ingresarButton.setText("Ingresar");
         ingresarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +103,7 @@ public class AlgoritmoD3 extends javax.swing.JFrame {
         tiempoDeEjecucionText.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tiempoDeEjecucionText.setForeground(new java.awt.Color(255, 255, 255));
         tiempoDeEjecucionText.setText("Tiempo de ejecucion:");
-        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
 
         tiempoDeEjecucion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tiempoDeEjecucion.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,7 +112,7 @@ public class AlgoritmoD3 extends javax.swing.JFrame {
         solonumeroaBuscar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         solonumeroaBuscar.setForeground(new java.awt.Color(255, 255, 255));
         solonumeroaBuscar.setText("Ingrese el número a buscar:");
-        getContentPane().add(solonumeroaBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        getContentPane().add(solonumeroaBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         numBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

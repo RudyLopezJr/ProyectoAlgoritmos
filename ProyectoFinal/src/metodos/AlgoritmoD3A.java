@@ -18,7 +18,7 @@ public final class AlgoritmoD3A {
         for(int i=0 ; i<n ; i++){
             arr[i]= vector.get(i);
         }
-        sort(arr, 0, n-1); 
+        sort(arr, 0, n); 
 
         cadena+= "Arreglo Ordenado: \n"; 
         mostrarArray(arr); 

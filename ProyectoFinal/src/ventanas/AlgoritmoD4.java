@@ -60,7 +60,7 @@ public class AlgoritmoD4 extends javax.swing.JFrame {
 
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image.png"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, -1, -1));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, -1));
 
         tittle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,7 +101,7 @@ public class AlgoritmoD4 extends javax.swing.JFrame {
         tiempoDeEjecucionText.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tiempoDeEjecucionText.setForeground(new java.awt.Color(255, 255, 255));
         tiempoDeEjecucionText.setText("Tiempo de ejecucion:");
-        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+        getContentPane().add(tiempoDeEjecucionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
 
         tiempoDeEjecucion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tiempoDeEjecucion.setForeground(new java.awt.Color(255, 255, 255));
