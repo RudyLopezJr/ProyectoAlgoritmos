@@ -157,7 +157,8 @@ public class AlgoritmosDivideYVenceras extends javax.swing.JFrame {
     }//GEN-LAST:event_algoritmo1ActionPerformed
 
     private void algoritmo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo4ActionPerformed
-        // TODO add your handling code here:
+       AlgoritmoD4 aD4 = new AlgoritmoD4();
+       aD4.setVisible(true);
     }//GEN-LAST:event_algoritmo4ActionPerformed
 
     /**
