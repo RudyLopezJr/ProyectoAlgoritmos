@@ -25,7 +25,7 @@ public class Escribir {
     private String cadena;
     public Escribir(String cadena2){
         cadena = cadena2;
-        System.out.println(cadena);
+        //System.out.println(cadena);
         BufferedWriter bw = null;
         FileWriter fw = null;
         try {
@@ -78,7 +78,7 @@ public class Escribir {
     }
     public ArrayList<Integer> getArray(){
         eglo.forEach((eglo1) -> {
-            System.out.println(""+eglo1);
+            //System.out.println(""+eglo1);
         });
         return eglo;
     }

@@ -2,6 +2,7 @@ package ventanas;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import metodos.Piramide;
 
 public class AlgoritmoR2 extends javax.swing.JFrame {
 
@@ -31,6 +32,11 @@ public class AlgoritmoR2 extends javax.swing.JFrame {
         logo = new javax.swing.JLabel();
         tittle = new javax.swing.JLabel();
         tittle1 = new javax.swing.JLabel();
+        jTextFila = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabelResultado = new javax.swing.JLabel();
+        jLabelTiempo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,24 +53,51 @@ public class AlgoritmoR2 extends javax.swing.JFrame {
                 salirActionPerformed(evt);
             }
         });
-        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
+        getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
 
         logo.setBackground(new java.awt.Color(255, 255, 255));
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/image.png"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, -1, -1));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, -1, -1));
 
         tittle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle.setForeground(new java.awt.Color(255, 255, 255));
-        tittle.setText("Generando permutaciones posibles");
+        tittle.setText("Generar filas de piramide de Pascal");
         getContentPane().add(tittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
 
         tittle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         tittle1.setForeground(new java.awt.Color(255, 255, 255));
-        tittle1.setText("Algoritmo Recursivo 1");
+        tittle1.setText("Algoritmo Recursivo 2");
         getContentPane().add(tittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, -1));
 
+        jTextFila.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFilaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFila, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 80, -1));
+
+        jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 80, -1));
+
+        jLabelResultado.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelResultado.setText("Resultado");
+        getContentPane().add(jLabelResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 610, 20));
+
+        jLabelTiempo.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jLabelTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 60, 20));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("TIempo (ms)");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 90, 20));
+
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 450));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -72,6 +105,22 @@ public class AlgoritmoR2 extends javax.swing.JFrame {
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
        this.dispose();
     }//GEN-LAST:event_salirActionPerformed
+
+    private void jTextFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFilaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFilaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Piramide p = new Piramide();                        //caso extremo: fila = 40 columna = 20
+        p.setFila(Integer.parseInt(jTextFila.getText()));           //caso no tan extremo: fila = 27 columna = 13
+        
+        long TInicio, tiempo; 
+        TInicio = System.currentTimeMillis();
+        jLabelResultado.setText(p.Pascal());
+        tiempo = System.currentTimeMillis() - TInicio; 
+        
+        jLabelTiempo.setText(String.valueOf(tiempo));
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,14 +139,30 @@ public class AlgoritmoR2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlgoritmoR2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoR4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlgoritmoR2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoR4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlgoritmoR2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoR4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlgoritmoR2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlgoritmoR4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -124,7 +189,12 @@ public class AlgoritmoR2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelResultado;
+    private javax.swing.JLabel jLabelTiempo;
+    private javax.swing.JTextField jTextFila;
     private javax.swing.JLabel logo;
     private javax.swing.JButton salir;
     private javax.swing.JLabel tittle;

@@ -69,6 +69,11 @@ public class AlgoritmosDivideYVenceras extends javax.swing.JFrame {
         algoritmo1.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo1.setText("Algoritmo 1");
+        algoritmo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                algoritmo1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(algoritmo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 230, 90));
 
         algoritmoTitulo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -79,6 +84,11 @@ public class AlgoritmosDivideYVenceras extends javax.swing.JFrame {
         algoritmo2.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo2.setText("Algoritmo 2");
+        algoritmo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                algoritmo2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(algoritmo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 230, 90));
 
         algoritmoTitulo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -104,6 +114,11 @@ public class AlgoritmosDivideYVenceras extends javax.swing.JFrame {
         algoritmo4.setBackground(new java.awt.Color(153, 153, 255));
         algoritmo4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         algoritmo4.setText("Algoritmo 4");
+        algoritmo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                algoritmo4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(algoritmo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, 230, 90));
 
         algoritmoTitulo4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -127,8 +142,23 @@ public class AlgoritmosDivideYVenceras extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void algoritmo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo3ActionPerformed
-        // TODO add your handling code here:
+       AlgoritmoD3 aD3 = new AlgoritmoD3();
+       aD3.setVisible(true);
     }//GEN-LAST:event_algoritmo3ActionPerformed
+
+    private void algoritmo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo2ActionPerformed
+        AlgoritmoD2 aD2 = new AlgoritmoD2();
+       aD2.setVisible(true);
+    }//GEN-LAST:event_algoritmo2ActionPerformed
+
+    private void algoritmo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo1ActionPerformed
+       AlgoritmoD1 aD1 = new AlgoritmoD1();
+       aD1.setVisible(true);
+    }//GEN-LAST:event_algoritmo1ActionPerformed
+
+    private void algoritmo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_algoritmo4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_algoritmo4ActionPerformed
 
     /**
      * @param args the command line arguments

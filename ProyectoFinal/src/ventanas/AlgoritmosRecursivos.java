@@ -150,7 +150,8 @@ public class AlgoritmosRecursivos extends javax.swing.JFrame {
     }                                          
 
     private void algoritmo2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        // TODO add your handling code here:
+       AlgoritmoR2 aR2 = new AlgoritmoR2();
+       aR2.setVisible(true);
     }                                          
 
     private void algoritmo4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
